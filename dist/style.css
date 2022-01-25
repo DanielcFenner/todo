@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+:root {
+  --blue1: hsl(212 35% 9.2%);
+  --blue2: hsl(216 50% 11.8%);
+  --blue3: hsl(214 59.4% 15.3%);
+  --blue4: hsl(214 65.8% 17.9%);
+  --blue5: hsl(213 71.2% 20.2%);
+  --blue6: hsl(212 77.4% 23.1%);
+  --blue7: hsl(211 85.1% 27.4%);
+  --blue8: hsl(211 89.7% 34.1%);
+  --blue9: hsl(206 100% 50%);
+  --blue10: hsl(209 100% 60.6%);
+  --blue11: hsl(210 100% 66.1%);
+  --blue12: hsl(206 98% 95.8%);
+  --slate1: hsl(200 7% 8.8%);
+  --slate2: hsl(195 7.1% 11%);
+  --slate3: hsl(197 6.8% 13.6%);
+  --slate4: hsl(198 6.6% 15.8%);
+  --slate5: hsl(199 6.4% 17.9%);
+  --slate6: hsl(201 6.2% 20.5%);
+  --slate7: hsl(203 6% 24.3%);
+  --slate8: hsl(207 5.6% 31.6%);
+  --slate9: hsl(206 6% 43.9%);
+  --slate10: hsl(206 5.2% 49.5%);
+  --slate11: hsl(206 6% 63%);
+  --slate12: hsl(210 6% 93%);
+  --pink1: hsl(318 25% 9.6%);
+  --pink2: hsl(319 32.2% 11.6%);
+  --pink3: hsl(319 41% 16%);
+  --pink4: hsl(320 45.4% 18.7%);
+  --pink5: hsl(320 49% 21.1%);
+  --pink6: hsl(321 53.6% 24.4%);
+  --pink7: hsl(321 61.1% 29.7%);
+  --pink8: hsl(322 74.9% 37.5%);
+  --pink9: hsl(322 65% 54.5%);
+  --pink10: hsl(323 72.8% 59.2%);
+  --pink11: hsl(325 90% 66.4%);
+  --pink12: hsl(322 90% 95.8%);
+  font-size: 18px;
+}
+
+@keyframes slideup {
+  from {
+    transform: translate(0px, 3rem);
+    opacity: 0%;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 100%;
+  }
+}
+
+a {
+  color: var(--blue11);
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--slate1);
+  color: var(--slate12);
+  position: relative;
+}
+
+#container {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
+header {
+  background-color: var(--slate2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+header a {
+  display: flex;
+  justify-content: center;
+  color: var(--slate9);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#lists {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#inbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#lists-title {
+  display: flex;
+}
+
+nav button {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border-style: none;
+  color: var(--slate12);
+  text-align: left;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--slate3);
+}
+
+nav button:hover {
+  background-color: var(--slate4);
+}
+
+.active {
+  background-color: var(--slate6);
+}
+
+.active:hover {
+  background-color: var(--slate7);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 3.5rem;
+  width: 100%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 600px;
+}
+
+.new-todo {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  background-color: var(--slate2);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.todo-input {
+  display: flex;
+  flex-grow: 1;
+  width: 15rem;
+  background-color: var(--slate3);
+  border-radius: 0.5rem;
+  border-style: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: var(--slate12);
+}
+
+.new-todo input:focus-visible {
+  background-color: var(--slate4);
+}
+
+.new-todo input:hover {
+  background-color: var(--slate4);
+}
+
+.add-todo {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: linear-gradient(45deg, var(--blue9), var(--pink9));
+  border-style: none;
+  color: var(--slate12);
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+}
+
+.add-todo:hover {
+  background: linear-gradient(45deg, var(--blue10), var(--pink10));
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.todo-element {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--slate2);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  animation: slideup 0.2s;
+}
+
+.todo-element:hover {
+  background-color: var(--slate3);
+}
+
+#date {
+  cursor: pointer;
+  display: flex;
+  background-color: var(--slate3);
+  border-radius: 0.5rem;
+  border-style: none;
+  padding: 0.5rem;
+  font-size: 0.75em;
+  color: var(--slate12);
+}
+
+#date:hover {
+  background-color: var(--slate4);
+}
+
+ion-icon {
+  opacity: 1;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--slate7);
+  border-radius: 0.25rem;
+}
+
+ion-icon:hover {
+  background-color: var(--slate6);
+  color: var(--slate9);
+}
+
+#new-list {
+  flex-grow: 1;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border-style: none;
+  color: var(--slate11);
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--slate2);
+}
+
+#new-list:hover {
+  background: var(--slate4);
+}
+
+#modal {
+  position: fixed;
+  z-index: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.479);
+  backdrop-filter: blur(5px);
+  animation: slideup 0.25s;
+}
+
+#add-list-modal {
+  display: flex;
+  background-color: var(--slate1);
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+#add-list-input {
+  display: flex;
+  flex-grow: 1;
+  background-color: var(--slate3);
+  border-radius: 0.5rem;
+  border-style: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: var(--slate12);
+}
+
+#add-list-input:focus-visible {
+  background-color: var(--slate4);
+}
+
+#add-list-input:hover {
+  background-color: var(--slate4);
+}
+
+#add-list-button {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: linear-gradient(45deg, var(--blue9), var(--pink9));
+  border-style: none;
+  color: var(--slate12);
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+}
+
+#listsh5 {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.listDiv {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border-style: none;
+  color: var(--slate12);
+  text-align: left;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--slate3);
+}
+
+.todo-title-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#remove-list {
+  margin-top: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--slate11);
+  padding: 0.5rem 1rem;
+  border-style: none;
+  border-radius: 0.5rem;
+  background-color: var(--slate1);
+}
+
+#remove-list:hover {
+  background-color: var(--slate3);
+}
+
+#trash-icon {
+  padding-left: 1rem;
+  color: var(--slate7);
+}
+
+.todo-right-side {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.todo-right-side p {
+  color: var(--slate11);
+  font-size: 0.75rem;
+}
+
+.dateText {
+  display: flex;
+  align-items: center;
+  color: var(--slate11);
+  font-size: 0.75rem;
+}
