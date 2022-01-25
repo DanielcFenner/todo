@@ -5,4 +5,6 @@ This is a todolist app I started working on through The Odin Project course, but
 ### Planned updates (when i learn how to do it!)
 
 - Add a database
+- Mobile responsiveness
 - Share lists
+
