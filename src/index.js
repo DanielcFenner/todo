@@ -61,7 +61,7 @@ addTodo.addEventListener("click", (e) => {
   e.preventDefault();
   let newTodo = new Todo(Dom.todoInputValue(), Dom.todoInputDate());
   todoLists[Dom.activeList].push(newTodo);
-  Dom.renderTodo(newTodo, todoLists[Dom.activeList]);
+  Dom.renderTodo(newTodo, todoLists[Dom.activeList], todoLists);
   Dom.resetTodoInput();
   Dom.localStorageSave(todoLists);
 });

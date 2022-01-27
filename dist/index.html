@@ -27,6 +27,8 @@
           name="add-list-input"
           id="add-list-input"
           placeholder="📝 List Title"
+          required
+          maxlength="25"
         />
         <button type="submit" form="add-list-modal" id="add-list-button">
           new list
@@ -66,6 +68,8 @@
               type="text"
               class="todo-input"
               placeholder="get tacos"
+              required
+              maxlength="25"
             />
             <input name="date" type="date" id="date" placeholder="by when?" />
             <button type="submit" form="add-todo-form" class="add-todo">
