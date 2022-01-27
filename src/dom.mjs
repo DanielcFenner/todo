@@ -295,14 +295,16 @@ export default class Dom {
     for (let i = 0; i < listsArray.length; i++) {
       let todo = listsArray[i];
       let howLong = parseInt(
-        formatDistanceToNowStrict(todo.due, { unit: "day" }).slice(0, 1)
+        formatDistanceToNowStrict(todo.due, { unit: "day" }).slice(0, 2)
       );
-
       if (howLong === 0) {
         inboxList["🕡️ Today"].push(todo);
-      } else if (howLong >= 1 || howLong <= 7) {
         inboxList["📅 This Week"].push(todo);
-      } else if (howLong >= 8 || howLong <= 30) {
+        inboxList["🗓️ This Month"].push(todo);
+      } else if (howLong >= 1 && howLong <= 7) {
+        inboxList["📅 This Week"].push(todo);
+        inboxList["🗓️ This Month"].push(todo);
+      } else if (howLong >= 8 && howLong <= 30) {
         inboxList["🗓️ This Month"].push(todo);
       }
     }
