@@ -259,7 +259,7 @@ main {
   cursor: pointer;
   background: linear-gradient(45deg, var(--blue9), var(--pink9));
   border-style: none;
-  color: var(--slate12);
+  color: white;
   text-align: left;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
