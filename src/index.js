@@ -65,3 +65,16 @@ addTodo.addEventListener("click", (e) => {
   Dom.resetTodoInput();
   Dom.localStorageSave(todoLists);
 });
+
+// theme switch setup
+function setTheme() {
+  const root = document.documentElement;
+  console.log("hi");
+  console.log(root.className);
+  const newTheme = root.className === "light" ? "dark" : "light";
+  root.className = newTheme;
+}
+
+const themeSwitchButton = document.querySelector("#theme-switch");
+
+themeSwitchButton.addEventListener("click", setTheme);
