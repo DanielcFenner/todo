@@ -73,6 +73,8 @@ function setTheme() {
   console.log(root.className);
   const newTheme = root.className === "light" ? "dark" : "light";
   root.className = newTheme;
+  const newText = themeSwitchButton.textContent === "☀️" ? "🌙" : "☀️";
+  themeSwitchButton.textContent = newText;
 }
 
 const themeSwitchButton = document.querySelector("#theme-switch");

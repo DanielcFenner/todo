@@ -85,7 +85,7 @@
 }
 
 * {
-  transition: all 0.25s ease;
+  transition: background-color 0.25s ease;
 }
 
 @keyframes slideup {
@@ -454,7 +454,12 @@ ion-icon:hover {
 }
 
 #theme-switch {
+  cursor: pointer;
   position: absolute;
   right: 1rem;
   top: 1rem;
+  border-radius: 999px;
+  border-style: none;
+  background-color: var(--slate12);
+  padding: 0.5rem 1rem;
 }
